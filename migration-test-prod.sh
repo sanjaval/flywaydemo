@@ -14,7 +14,7 @@
  pagilaPassword="Kjqfw6KNc4trOD5S"
 
  docker pull postgres:12-alpine > /dev/null 2>&1
- docker pull flyway/flyway > /dev/null 2>&1
+ docker pull flyway/flyway
 
  echo
  echo "Starting migration of database with flyway"
