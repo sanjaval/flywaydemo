@@ -6,6 +6,12 @@
  curl -sL https://run.spawn.cc/install | sh > /dev/null 2>&1
  export PATH=$HOME/.spawnctl/bin:$PATH
  echo "spawnctl successfully installed"
+ 
+ databaseName="postgres"
+ pagilaHost="rgba562s.instances.spawn.cc"
+ pagilaPort="30072"
+ pagilaUser="spawn_admin_YOsj"
+ pagilaPassword="Kjqfw6KNc4trOD5S"
 
  docker pull postgres:12-alpine > /dev/null 2>&1
  docker pull flyway/flyway > /dev/null 2>&1
@@ -17,7 +23,3 @@
 
  echo "Successfully migrated 'Pagila' database"
  echo
-
- spawnctl delete data-container $pagilaContainerName --accessToken $SPAWNCTL_ACCESS_TOKEN -q
-
- echo "Successfully cleaned up the Spawn data container '$pagilaContainerName'"
