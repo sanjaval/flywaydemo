@@ -1,6 +1,6 @@
 name: Database migration test
 
- on: workflow_dispatch
+ on: workflow_dispatch:
 
  jobs:
    run_migration_test:
