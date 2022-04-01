@@ -1,4 +1,4 @@
-create table testFlyway9(
+create table public.testFlyway9(
     ID int not null,
     NAME varchar(100) not null
 );
