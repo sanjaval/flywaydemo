@@ -19,7 +19,7 @@
  echo
  echo "Starting migration of database with flyway"
 
- docker run --rm -v sql:/flyway/sql -v /:/flyway/conf flyway/flyway migrate -url="jdbc:postgresql://$pagilaHost:$pagilaPort/$databaseName" -user=$pagilaUser -password=$pagilaPassword
+ docker run --rm -v /sql:/flyway/sql -v /:/flyway/conf flyway/flyway migrate -url="jdbc:postgresql://$pagilaHost:$pagilaPort/$databaseName" -user=$pagilaUser -password=$pagilaPassword
 
  echo "Successfully migrated 'Pagila' database"
  echo
